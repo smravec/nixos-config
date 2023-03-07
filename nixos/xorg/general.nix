@@ -12,11 +12,11 @@
   #Needed for icon themes to work
   programs.dconf.enable = true;
 
-  #Turn off screen blanking
   environment.extraInit = ''
+    #Turn off screen blanking
     xset s off -dpms
-  '';
 
-  #Turn off guy for ssh auth
-  programs.ssh.enableAskPassword = false;
+    #Turn off gui for ssh auth
+    unset -v SSH_ASKPASS
+  '';
 }
