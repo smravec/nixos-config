@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   #silent boot
   disabledModules = ["system/boot/stage-2.nix" "system/boot/stage-1.nix" "system/etc/etc.nix"];  
