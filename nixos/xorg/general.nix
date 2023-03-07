@@ -16,4 +16,7 @@
   environment.extraInit = ''
     xset s off -dpms
   '';
+
+  #Turn off guy for ssh auth
+  programs.ssh.enableAskPassword = false;
 }

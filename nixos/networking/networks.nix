@@ -15,4 +15,5 @@
   #Syntax : 
   #networking.wireless.networks.Network-Name.psk = "password";
   
+  networking.wireless.networks   
 }
