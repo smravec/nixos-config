@@ -9,12 +9,12 @@
 	
 	#Bash
 	./config/bashrc.nix
+	
+	#Wezterm
+	./config/wezterm.nix
   ];
   
   home.packages = with pkgs; [
-	#Terminal	
-	wezterm	
-
 	#Text editor
 	neovim
 	vscodium
