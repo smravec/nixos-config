@@ -2,6 +2,9 @@
 {
   services.xserver.enable = true;
   
+  #Compositor
+  services.picom.enable = true;
+
   #Touchpad
   services.xserver.libinput.enable = true;
   services.xserver.synaptics.palmDetect = true;  

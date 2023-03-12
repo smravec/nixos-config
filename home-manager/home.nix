@@ -12,6 +12,12 @@
 	
 	#Wezterm
 	./config/wezterm.nix
+
+	#Polybar
+	./config/polybar.nix
+	
+	#Rofi
+	./config/rofi.nix
   ];
   
   home.packages = with pkgs; [
@@ -50,6 +56,10 @@
 
 	#Office suite
 	onlyoffice-bin
+
+	#Font
+	jetbrains-mono
+	nerdfonts
         ];
 
   home.username = "simon";
