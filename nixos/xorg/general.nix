@@ -4,6 +4,7 @@
   
   #Compositor
   services.picom.enable = true;
+  services.picom.backend = "glx";
 
   #Touchpad
   services.xserver.libinput.enable = true;
