@@ -10,14 +10,16 @@
 	#Bash
 	./config/bashrc.nix
 	
-	#Wezterm
-	./config/wezterm.nix
+	#Alacritty
+	./config/alacritty.nix
 
 	#Polybar
 	./config/polybar.nix
 	
 	#Rofi
 	./config/rofi.nix
+
+	#Neovim
   ];
   
   home.packages = with pkgs; [
