@@ -66,7 +66,7 @@
     { 
       key = "C";
       mods = "Control | Shift"; 
-      chars = "\x03"; 
+      chars = "\\x03"; 
     }
     { 
       key = "C"; 

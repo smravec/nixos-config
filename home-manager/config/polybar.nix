@@ -47,12 +47,10 @@
 
   "module/keyboard" = {
     type = "custom/script";
-    tail = true;
+    interval = "0.1";
     exec = "/home/simon/nixos-config/home-manager/config/keyboard-status.sh";
     click-left = "/home/simon/nixos-config/home-manager/config/keyboard.sh";
-
   };
-
 
   "module/date" = {
     type = "internal/date";
