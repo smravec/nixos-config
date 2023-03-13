@@ -21,7 +21,7 @@
     background = "#292828";
 
     modules-left = "launcher workspaces";
-    modules-right = "date battery";
+    modules-right = "keyboard date battery";
 
     font-0 = "JetBrains Mono:size=14;4";
     #Logo
@@ -45,11 +45,19 @@
      content-padding = 2;
   }; 
 
+  "module/keyboard" = {
+    type = "custom/script";
+    tail = true;
+    exec = "/home/simon/nixos-config/home-manager/config/keyboard-status.sh";
+    click-left = "/home/simon/nixos-config/home-manager/config/keyboard.sh";
+
+  };
+
 
   "module/date" = {
     type = "internal/date";
     internal = 5;
-    date = "%a %d/%m %I:%M |";
+    date = "| %a %d/%m %I:%M |";
     label = " %date% ";
   };
 
