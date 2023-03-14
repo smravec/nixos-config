@@ -4,11 +4,11 @@
   
   gtk.cursorTheme.package = pkgs.capitaine-cursors;
   gtk.cursorTheme.name =  "capitaine-cursors-white";
-  gtk.cursorTheme.size = 48;
+  gtk.cursorTheme.size = 24;
   
   home.pointerCursor.package = pkgs.capitaine-cursors;
   home.pointerCursor.name = "capitaine-cursors-white";
-  home.pointerCursor.size = 48;
+  home.pointerCursor.size = 24;
   home.pointerCursor.x11.defaultCursor = "capitaine-cursors-white";
   
   xsession.enable = true;

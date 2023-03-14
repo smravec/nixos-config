@@ -13,13 +13,13 @@
 	#Alacritty
 	./config/alacritty.nix
 
-	#Polybar
-	./config/polybar.nix
-	
 	#Rofi
-	./config/rofi.nix
+	#./config/rofi.nix
 
 	#Neovim
+
+	#Sway
+	./config/sway.nix
   ];
   
   home.packages = with pkgs; [
@@ -37,27 +37,27 @@
 	acpi
 	pulsemixer
 	cmatrix
-	feh
+	#feh
 	nix-prefetch-github
-	run-scaled
+	#run-scaled
 
 	#File browser
-	xfce.thunar
+	#xfce.thunar
 
 	#Interpreter
-	python3	
+	#python3	
 
 	#Video editor
-	shotcut
+	#shotcut
 	
 	#Image editor
-	krita
+	#krita
 
 	#Messaging app
-	signal-desktop
+	#signal-desktop
 
 	#Office suite
-	onlyoffice-bin
+	#onlyoffice-bin
 
 	#Font
 	jetbrains-mono

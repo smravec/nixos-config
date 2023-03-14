@@ -23,18 +23,22 @@
         
 	#networking
 	./networking/networks.nix
+	
+	#wayland
+	./wayland/general.nix
+	./wayland/window-manager.nix
 
 	#xorg
-	./xorg/sddm.nix
-	./xorg/general.nix
-	./xorg/window-manager.nix
+	#./xorg/sddm.nix
+	#./xorg/general.nix
+	#./xorg/window-manager.nix
     ];
 
   time.timeZone = "Europe/Bratislava";
 
   environment.sessionVariables = rec {
     XDG_CONFIG_HOME = "\${HOME}/.config";
-    XCURSOR_SIZE = "48";
+    XCURSOR_SIZE = "24";
   };
     
   users.users.simon = {
@@ -49,8 +53,8 @@
     freshfetch
     
     #sddm
-    libsForQt5.qt5.qtquickcontrols
-    libsForQt5.qt5.qtgraphicaleffects
+    #libsForQt5.qt5.qtquickcontrols
+    #libsForQt5.qt5.qtgraphicaleffects
     capitaine-cursors
    ];
   
@@ -61,7 +65,7 @@
   #};
 
   #services.openssh.enable = true;
-  services.printing.enable = true;
-  
+  services.printing.enable = true;    
+ 
   system.stateVersion = "22.11";
 }
