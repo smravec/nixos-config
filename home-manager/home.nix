@@ -18,8 +18,8 @@
 
 	#Neovim
 
-	#Sway
-	#./config/sway.nix
+	#Waybar
+	./config/waybar.nix
   ];
   
   home.packages = with pkgs; [

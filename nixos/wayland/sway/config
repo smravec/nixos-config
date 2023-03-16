@@ -116,20 +116,14 @@ input "type:touchpad" {
     middle_emulation enabled
 }
 
-# Status Bar:
-bar {
-    position top
-
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout "us,sk"
 }
 
-#Startup
+# Waybar
+exec waybar &
+
+# Startup
 assign [app_id="terminal1"] workspace number 2
 assign [app_id="qutebrowser"] workspace number 3
 assign [app_id="codium-url-handler"] workspace number 4
@@ -138,7 +132,7 @@ exec alacritty --class "terminal1" &
 exec qutebrowser &
 exec codium --ozone-platform-hint=auto &
 
-#Fixes
+# Fixes
 exec dbus-sway-environment
 exec configure-gtk
 exec systemctl --user import-environment
