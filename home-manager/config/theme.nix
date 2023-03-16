@@ -1,5 +1,7 @@
 {config, pkgs, ...}:
 {
+
+  home.packages = [ pkgs.dconf ];
   gtk.enable = true;
   
   gtk.cursorTheme.package = pkgs.capitaine-cursors;

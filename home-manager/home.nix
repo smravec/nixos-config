@@ -19,14 +19,14 @@
 	#Neovim
 
 	#Sway
-	./config/sway.nix
+	#./config/sway.nix
   ];
   
   home.packages = with pkgs; [
 	#Text editor
 	neovim
 	vscodium
-	
+
 	#Browser
 	firefox
 	chromium
@@ -39,7 +39,9 @@
 	cmatrix
 	#feh
 	nix-prefetch-github
-	#run-scaled
+	xorg.xeyes
+	bemenu
+	wofi
 
 	#File browser
 	#xfce.thunar
@@ -54,10 +56,10 @@
 	#krita
 
 	#Messaging app
-	#signal-desktop
+	signal-desktop
 
 	#Office suite
-	#onlyoffice-bin
+	onlyoffice-bin
 
 	#Font
 	jetbrains-mono

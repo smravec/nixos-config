@@ -27,11 +27,7 @@
 	#wayland
 	./wayland/general.nix
 	./wayland/window-manager.nix
-
-	#xorg
-	#./xorg/sddm.nix
-	#./xorg/general.nix
-	#./xorg/window-manager.nix
+	./wayland/login-manager.nix
     ];
 
   time.timeZone = "Europe/Bratislava";
@@ -51,11 +47,6 @@
     wget
     tmux
     freshfetch
-    
-    #sddm
-    #libsForQt5.qt5.qtquickcontrols
-    #libsForQt5.qt5.qtgraphicaleffects
-    capitaine-cursors
    ];
   
   #programs.mtr.enable = true;

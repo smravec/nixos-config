@@ -7,8 +7,8 @@
   		modifier = "Mod4";
   		terminal = "alacritty";
   		startup = [
-  			{command = "firefox";}
-			{command = "alacritty";}
+  			{command = "exec dbus-sway-environment";}
+			{command = "exec configure-gtk";}
   		];
   	};
   };

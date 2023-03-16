@@ -2,7 +2,7 @@
 {config, pkgs, lib, ... }:
 
   let
-    dbus-sway-enviroment = pkgs.writeTextFile {
+    dbus-sway-environment = pkgs.writeTextFile {
     name = "dbus-sway-environment";
     destination = "/bin/dbus-sway-enviroment";
     executable = true;
@@ -34,7 +34,7 @@ in
 environment.systemPackages = with pkgs; [
 alacritty
 sway
-dbus-sway-enviroment
+dbus-sway-environment
 configure-gtk
 wayland
 xdg-utils
@@ -55,9 +55,11 @@ xdg.portal = {
 enable = true;
 wlr.enable = true;
 extraPortals = [pkgs.xdg-desktop-portal-gtk];
-
-
 };
 
-security.polkit.enable = true;
+programs.sway = {
+enable = true;
+wrapperFeatures.gtk = true;
+};
+
 }
