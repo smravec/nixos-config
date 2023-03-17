@@ -23,15 +23,13 @@ default_border pixel 1
 
 # Wallpaper
 output * bg /home/simon/nixos-config/wallpaper.png fill
+
 # Key bindings
     # Start a terminal
     bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec wofi --show drun
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -42,6 +40,10 @@ output * bg /home/simon/nixos-config/wallpaper.png fill
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+
+    # Screenshots
+    bindsym $mod+s exec grim  -g "$(slurp)" ~/Desktop/Pictures/Screenshots/Screenshot-$(date +'%H:%M:%S.png')
+
 
 # Moving around:
     # Move your focus around
@@ -77,6 +79,14 @@ output * bg /home/simon/nixos-config/wallpaper.png fill
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 4
+
+# Media keys
+# Brightness
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec light -A 10
+
+# Volume
+bindsym XF86AudioMute exec 'pulsemixer --toggle-mute'
 
 # Layout stuff:
     # Split verticaly =

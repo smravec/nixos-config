@@ -13,9 +13,6 @@
 	#Alacritty
 	./config/alacritty.nix
 
-	#Rofi
-	#./config/rofi.nix
-
 	#Neovim
 
 	#Waybar
@@ -33,33 +30,35 @@
 	qutebrowser
 
 	#CLI program
-	kpcli
-	acpi
-	pulsemixer
-	cmatrix
-	#feh
-	nix-prefetch-github
+	kpcli #password manager
+	acpi #battery status
+	pulsemixer #audio manager
+	cmatrix #!!!
+	imv #image viewer
+	nix-prefetch-github #get hash and head from github repo
 	xorg.xeyes
+	
+	#App launcher
 	bemenu
-	wofi
 
 	#File browser
-	#xfce.thunar
-
-	#Interpreter
-	#python3	
+	xfce.thunar
+	
+	#Video viewer
+	haruna
 
 	#Video editor
-	#shotcut
+	shotcut
 	
 	#Image editor
-	#krita
+	pinta
+	inkscape
 
 	#Messaging app
 	signal-desktop
 
 	#Office suite
-	onlyoffice-bin
+	libreoffice
 
 	#Font
 	jetbrains-mono

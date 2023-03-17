@@ -7,6 +7,8 @@
     TERM = "alacritty";
   };
 
+  working_directory = "/home/simon/Desktop";
+
   window = {
     padding = {
       x = 20;

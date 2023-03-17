@@ -24,7 +24,7 @@ datadir = "${schema}/share/gsetting-schemas/${schema.name}";
 in ''
 export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
 gnome_schema=org.gnome.desktop.interface
-gsettings set $gnome_schema gtk-theme 'Dracula'
+gsettings set $gnome_schema gtk-theme 'WhiteSur-dark'
 gsettings set $gnome_schema cursor-theme 'capitaine-cursors-white'
 '';
 };
@@ -39,9 +39,7 @@ configure-gtk
 wayland
 xdg-utils
 glib
-dracula-theme
-swaylock
-swayidle
+whitesur-icon-theme
 grim
 slurp
 wl-clipboard

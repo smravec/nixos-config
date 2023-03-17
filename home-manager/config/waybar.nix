@@ -17,6 +17,12 @@
     "sway/workspaces" = {
       disable-scroll = true;
       all-outputs = true;
+      persistent_workspaces = {
+        "1" = []; 
+        "2" = [];
+	"3" = [];
+	"4" = [];
+      };
     };
 
     "clock" = {
@@ -37,6 +43,7 @@
     "custom/logo" = {
       format = "";
       tooltip = false;
+      on-click = ''bemenu-run -n'';
     };
   };
   };
