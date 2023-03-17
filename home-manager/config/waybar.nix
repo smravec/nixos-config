@@ -17,7 +17,7 @@
     "custom/logo" = {
       format = "";
       tooltip = false;
-      on-click = ''bemenu-run --accept-single  -n -p "run" --nb "#292828" --nf "#ffffff" --hf "#ffffff" --sf "#ffffff"'';
+      on-click = ''bemenu-run --accept-single  -n -p "Launch" --hp 4 --hf "#ffffff" --sf "#ffffff" --tf "#ffffff" '';
     };
 
     "sway/workspaces" = {
