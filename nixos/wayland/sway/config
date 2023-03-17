@@ -142,6 +142,9 @@ exec alacritty --class "terminal1" &
 exec qutebrowser &
 exec codium --ozone-platform-hint=auto &
 
+#Window rules
+for_window [app_id="com.github.finefindus.eyedropper"] floating enable
+
 # Fixes
 exec dbus-sway-environment
 exec configure-gtk

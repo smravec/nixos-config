@@ -36,7 +36,9 @@
 	cmatrix #!!!
 	imv #image viewer
 	nix-prefetch-github #get hash and head from github repo
-	xorg.xeyes
+
+	#Color palette
+	eyedropper
 	
 	#App launcher
 	bemenu
