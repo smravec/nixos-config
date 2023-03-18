@@ -37,6 +37,9 @@
         let g:NERDTreeMinimalUI = 1
         let g:NERDTreeIgnore = []
         let g:NERDTreeStatusline = ""
+        highlight NERDTreeCWD ctermfg=white
+        " Exit Vim if NERDTree is the only window remaining in the only tab.
+        autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
       '';
     }
 
@@ -61,6 +64,4 @@
     set smarttab
     set clipboard+=unnamedplus 
   '';
-
-
 }
