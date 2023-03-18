@@ -14,14 +14,16 @@
 	./config/alacritty.nix
 
 	#Neovim
+	./config/neovim.nix
 
 	#Waybar
 	./config/waybar.nix
+
+	#Qutebrowser
   ];
   
   home.packages = with pkgs; [
 	#Text editor
-	neovim
 	vscodium
 
 	#Browser
