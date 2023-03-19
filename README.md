@@ -1,6 +1,8 @@
-# NIXOS CONFIG
+# NixOS Config
 <img src=preview.png/>
-Minimal Sway NixOS rice with full silent boot
+
+<p align=center> <b>Minimal Sway NixOS rice with full silent boot<b/> <p/>
+
 ## Installation
 Install nixos with this guide (make sure to use systemd boot) <br/>
 https://nixos.org/manual/nixos/stable/ <br/>
