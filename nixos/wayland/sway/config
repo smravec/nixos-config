@@ -88,6 +88,9 @@ bindsym XF86MonBrightnessUp exec light -A 10
 # Volume
 bindsym XF86AudioMute exec 'pulsemixer --toggle-mute'
 
+# Git token (paste it into "")
+bindsym $mod+g exec wl-copy "" 
+
 # Layout stuff:
     # Split verticaly =
     bindsym $mod+v splitv
