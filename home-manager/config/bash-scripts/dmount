@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# dmount or default mount, mounts media at /mnt 
+# that can be edited without root permissions
+
+echo "Available devices are:"
+lsblk
+
+read -e -p "input device name: " device
+sudo mount -o gid=wheel,fmask=113,dmask=002 /dev/$device /mnt

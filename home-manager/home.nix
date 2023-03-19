@@ -17,9 +17,10 @@
 	./config/neovim.nix
 
 	#Waybar
-	./config/waybar.nix
+        ./config/waybar.nix
 
-	#Qutebrowser
+        #Yt-dlp
+        ./config/yt-dlp.nix
   ];
   
   home.packages = with pkgs; [
@@ -66,7 +67,7 @@
 
 	#Font
 	jetbrains-mono
-	nerdfonts
+        nerdfonts
         ];
 
   home.username = "simon";

@@ -11,11 +11,11 @@ export PS1="\[$(tput bold)\]\[\033[38;5;231m\][\[$(tput sgr0)\]\[\033[38;5;117m\
 
 set -o vi
 
-
-export PATH=$PATH:/usr/local/bin/python
+#Global path
 export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/nixos-config/home-manager/config/bash-scripts
 
 #Aliases
 alias ls="ls --color -la"
-alias mdownload="~/.config/scripts/mdownload"
 alias vim="nvim"
+alias passwords="kpcli --kdb=/home/simon/nixos-config/home-manager/config/bash-scripts/passwords.kbx"

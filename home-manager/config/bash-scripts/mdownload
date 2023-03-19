@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+#Script to download video or audio from yt
+
+read -e -p "audio(0) or video(1): " media_type
+read -e -p "url: " url
+read -e -p "media name: " name
+read -e -p "everything is good?" check
+
+if [ "$media_type" = "0" ]; then
+  echo "Installing audio ..."
+  yt-dlp --extract-audio --audio-format mp3 $url -P "~/Desktop/Music" -o "$artist-$name.mp3"
+elif [ "$media_type" = "1" ]; then
+  echo "Installing video ..."
+  yt-dlp $url -P "~/Desktop/Videos" -o "$name"
+else
+  echo "Invalid media type"
+fi
