@@ -43,7 +43,6 @@ whitesur-icon-theme
 grim
 slurp
 wl-clipboard
-mako
 capitaine-cursors
 ];
 
