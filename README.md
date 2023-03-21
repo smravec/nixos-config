@@ -16,7 +16,11 @@ git clone https://github.com/smravec/nixos-config
 ```
 ### Nixos
 Go to ``nixos/networking/networks.nix`` and setup wifi (in the cloned repository) <br/>
-Symlink it to ``/etc`` <br/>
+Copy ``/etc/nixos/hardware-configuration.nix`` to ``nixos/hardware-optimization``
+```
+cp /etc/nixos/hardware-configuration.nix ~/nixos-config/nixos/hardware-optimization/
+```
+Symlink this repository to ``/etc`` <br/>
 ```
 cd /etc
 ```
