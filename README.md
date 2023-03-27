@@ -61,3 +61,4 @@ cd ~/.config
 ```
 ln -s ~/nixos-config/nixos/wayland/sway/ .
 ```
+***PS: This config is made for the Framework laptop 11th gen***
