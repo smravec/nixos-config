@@ -1,6 +1,6 @@
 # Management of static files in /etc.
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 
@@ -66,7 +66,9 @@ in
 
 {
 
-  imports = [ /nix/var/nix/profiles/per-user/root/channels/nixos/nixos/modules/system/build.nix ];
+  imports = [
+    "${inputs.nixpkgs}/nixos/modules/system/build.nix"
+  ];
 
   ###### interface
 
@@ -194,7 +196,7 @@ in
       ''
         # Set up the statically computed bits of /etc.
         #echo "setting up /etc..."
-        ${pkgs.perl.withPackages (p: [ p.FileSlurp ])}/bin/perl ${/nix/var/nix/profiles/per-user/root/channels/nixos/nixos/modules/system/etc/setup-etc.pl} ${etc}/etc
+        ${pkgs.perl.withPackages (p: [ p.FileSlurp ])}/bin/perl ${inputs.nixpkgs}/nixos/modules/system/etc/setup-etc.pl ${etc}/etc
       '';
   };
 

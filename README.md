@@ -16,42 +16,18 @@ git clone https://github.com/smravec/nixos-config
 ```
 ### Nixos
 Go to ``nixos/networking/networks.nix`` and setup wifi (in the cloned repository) <br/>
-Copy ``/etc/nixos/hardware-configuration.nix`` to ``nixos/hardware-optimization``
-```
-cp /etc/nixos/hardware-configuration.nix ~/nixos-config/nixos/hardware-optimization/
-```
-Symlink this repository to ``/etc`` <br/>
-```
-cd /etc
-```
-```
-sudo rm -rf nixos
-```
-```
-sudo ln -s ~/nixos-config/nixos/ .
-```
+
 Rebuild your system
 ```
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch --flake .
 ```
 ### Home manager
-Download home-manager standalone ( after adding the home-manager channel reboot to refresh the $NIX_PATH var ) <br/>
-https://nix-community.github.io/home-manager/index.html#sec-install-standalone <br/>
-Symlink ``home-manager`` directory to ``~/.config`` <br/>
+Get home-manager:
 ```
-cd ~/.config
+nix shell nixpkgs#home-manager
 ```
 ```
-rm -rf nixpkgs
-```
-```
-ln -s ~/nixos-config/home-manager/ nixpkgs
-```
-Add unstable channel <br/>
-https://nix-community.github.io/home-manager/index.html#_how_do_i_install_packages_from_nixpkgs_unstable <br/>
-Rebuild home-manager
-```
-home-manager switch
+home-manager switch --flake .
 ```
 ### Sway
 Symlink sway config <br/>
